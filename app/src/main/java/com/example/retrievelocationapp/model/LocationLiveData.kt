@@ -7,10 +7,11 @@ import android.location.Location
 import androidx.core.app.ActivityCompat
 
 import androidx.lifecycle.LiveData
+import com.google.android.gms.location.LocationServices
 
 class LocationLiveData(private val context: Context): LiveData<Coordinates>() {
 
-    private val fusedLocationClient = LocationsServices.getFusedLocationProviderClient(context)
+    private val fusedLocationClient = LocationServices.getFusedLocationProviderClient(context)
 
     override fun onActive() {
         super.onActive()
